@@ -17,7 +17,7 @@ class _SpalshViewState extends State<SpalshView> {
   @override
   void initState() {
     super.initState();
-    navigateToOnboarding();
+    //navigateToOnboarding();
   }
 
   @override

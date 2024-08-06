@@ -21,6 +21,7 @@ class SplashViewBody extends StatelessWidget {
           child: SvgPicture.asset(Assets.assetsImagesPlant),
         ),
         AnimatedLogo(),
+        Text('عبدع'),
         SvgPicture.asset(
           Assets.assetsImagesSplashBottom,
           fit: BoxFit.fill,
