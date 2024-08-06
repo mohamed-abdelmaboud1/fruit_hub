@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.dart';
-import 'package:gap/gap.dart';
+
+import 'page_view_item_text_body.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({
@@ -31,13 +32,18 @@ class PageViewItem extends StatelessWidget {
                   model.image,
                 ),
               ),
+              Visibility(
+                visible: model.isVisible,
+                child: Positioned(
+                  top: 40,
+                  right: 20,
+                  child: Text('تخط'),
+                ),
+              ),
             ],
           ),
         ),
-        Gap(64),
-        model.titleWidget,
-        Text(
-            'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.')
+        PageViewItemTextBody(model: model),
       ],
     );
   }

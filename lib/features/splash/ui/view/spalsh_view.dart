@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/routing/app_router.dart';
@@ -17,7 +18,17 @@ class _SpalshViewState extends State<SpalshView> {
   @override
   void initState() {
     super.initState();
-    //navigateToOnboarding();
+    _hideAppBarStatus();
+    navigateToOnboarding();
+  }
+
+  void _hideAppBarStatus() {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.immersiveSticky, // hide both the status and the navigation
+      overlays: [
+        SystemUiOverlay.bottom,
+      ],
+    );
   }
 
   @override
