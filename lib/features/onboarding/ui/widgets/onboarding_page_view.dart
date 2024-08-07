@@ -4,6 +4,7 @@ import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.d
 import 'package:fruit_hub/features/onboarding/ui/widgets/page_view_item.dart';
 
 import 'page_view_item_title.dart';
+import 'page_view_item_title2.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({
@@ -16,7 +17,7 @@ class OnboardingPageView extends StatelessWidget {
     return [
       PageViewItemModel(
         isVisible: true,
-        titleWidget: PageViewItemTitle(),
+        titleWidget: PageViewItemTitle1(),
         description:
             'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
         backgroundImage: Assets.assetsImagesPageViewItem1BackgroundImage,
@@ -24,16 +25,7 @@ class OnboardingPageView extends StatelessWidget {
       ),
       PageViewItemModel(
         isVisible: false,
-        titleWidget: Text(
-          'ابحث وتسوق',
-          style: TextStyle(
-            color: Color(0xFF0C0D0D),
-            fontSize: 23,
-            fontFamily: 'Cairo',
-            fontWeight: FontWeight.w700,
-            height: 0,
-          ),
-        ),
+        titleWidget: PageViewItemTitle2(),
         description:
             'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية.',
         backgroundImage: Assets.assetsImagesPageViewItem2BackgroundImage,
@@ -47,9 +39,11 @@ class OnboardingPageView extends StatelessWidget {
     return PageView(
       controller: controller,
       children: pageViewItems
-          .map((e) => PageViewItem(
-                model: e,
-              ))
+          .map(
+            (e) => PageViewItem(
+              model: e,
+            ),
+          )
           .toList(),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/core/utils/app_styles.dart';
 import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.dart';
 
 import 'page_view_item_text_body.dart';
@@ -37,7 +38,7 @@ class PageViewItem extends StatelessWidget {
                 child: Positioned(
                   top: 40,
                   right: 20,
-                  child: Text('تخط'),
+                  child: Text('تخط',style: AppStyles.regular12,),
                 ),
               ),
             ],

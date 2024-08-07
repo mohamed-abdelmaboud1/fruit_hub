@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
 
-class PageViewItemTitle extends StatelessWidget {
-  const PageViewItemTitle({
+import '../../../../core/utils/app_styles.dart';
+
+class PageViewItemTitle1 extends StatelessWidget {
+  const PageViewItemTitle1({
     super.key,
   });
 
@@ -12,32 +15,18 @@ class PageViewItemTitle extends StatelessWidget {
         children: [
           TextSpan(
             text: 'مرحبًا بك في',
-            style: TextStyle(
-              color: Color(0xFF0C0D0D),
-              fontSize: 23,
-              fontFamily: 'Cairo',
-              fontWeight: FontWeight.w700,
-              height: 0,
-            ),
+            style: AppStyles.bold23,
           ),
           TextSpan(
             text: ' Fruit',
-            style: TextStyle(
-              color: Color(0xFF1B5E37),
-              fontSize: 23,
-              fontFamily: 'Cairo',
-              fontWeight: FontWeight.w700,
-              height: 0,
+            style: AppStyles.bold23.copyWith(
+              color: AppColors.primaryColor,
             ),
           ),
           TextSpan(
             text: 'HUB',
-            style: TextStyle(
+            style: AppStyles.bold23.copyWith(
               color: Color(0xFFF4A91F),
-              fontSize: 23,
-              fontFamily: 'Cairo',
-              fontWeight: FontWeight.w700,
-              height: 0,
             ),
           ),
         ],
