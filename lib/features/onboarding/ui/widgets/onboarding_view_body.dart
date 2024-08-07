@@ -3,8 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fruit_hub/features/onboarding/ui/widgets/onboarding_page_view.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/widgets/custom_button.dart';
 import 'custom_dots_indicator.dart';
+import 'onboarding_button.dart';
 
 class OnboardingViewBody extends HookWidget {
   const OnboardingViewBody({
@@ -29,18 +29,10 @@ class OnboardingViewBody extends HookWidget {
           position: currentPage.value,
         ),
         Gap(29),
-        Visibility(
-          visible: currentPage.value != 0,
-          maintainState: true,
-          maintainAnimation: true,
-          maintainSize: true,
-          child: CustomButton(
-            onPressed: () {},
-            text: 'ابدأ الان',
-          ),
+        OnboardingButton(
+          currentPage: currentPage,
         ),
         Gap(43),
-        
       ],
     );
   }

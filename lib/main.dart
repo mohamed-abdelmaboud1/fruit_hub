@@ -5,9 +5,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/utils/custom_scroll_behavior.dart';
 
+import 'core/services/cache_helper.dart';
 import 'generated/l10n.dart';
 
-void main() {
+void main() async {
+  await CacheHelper.init();
+
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
