@@ -40,7 +40,7 @@ class _SpalshViewState extends State<SpalshView> {
   }
 
   void navigateToNextPage() {
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 3), () {
       // Navigate to onBoarding after 2 seconds
       CacheHelper.skipOnboarding == true
           ? context.go(

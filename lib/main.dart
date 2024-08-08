@@ -27,6 +27,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       scrollBehavior: CustomScrollBehavior(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
       locale: Locale('ar'),
       localizationsDelegates: [
         S.delegate,
