@@ -9,7 +9,7 @@ class ForgotPasswordTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.centerRight,
       child: CusotmTextButton(
         text: 'نسيت كلمة المرور؟',
         onTap: () {},

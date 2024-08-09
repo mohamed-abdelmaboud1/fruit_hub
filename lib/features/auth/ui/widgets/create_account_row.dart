@@ -1,30 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_styles.dart';
-import 'package:fruit_hub/core/widgets/cusotm_text_button.dart';
-import 'package:gap/gap.dart';
+import 'package:fruit_hub/core/routing/app_router.dart';
+import 'package:go_router/go_router.dart';
 
-class CreateAccountRow extends StatelessWidget {
-  const CreateAccountRow({
+import 'text_with_button_row.dart';
+
+class CreateAccountNow extends StatelessWidget {
+  const CreateAccountNow({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'ليس لديك حساب؟',
-          style: AppStyles.semiBold13.copyWith(
-            color: Color(0xff949D9E),
-          ),
-        ),
-        Gap(2),
-        CusotmTextButton(
-          text: 'قم بإنشاء حساب',
-          onTap: () {},
-        ),
-      ],
+    return TextWithButtonRow(
+      text: 'ليس لديك حساب؟',
+      textButton: 'إنشاء حساب جديد',
+      onTap: () {
+        context.push(AppRouter.signUp);
+      },
     );
   }
 }

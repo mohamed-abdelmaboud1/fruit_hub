@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/app_styles.dart';
-import 'package:fruit_hub/features/auth/ui/view/login_view.dart';
 
 import 'auth_divider.dart';
 

@@ -40,7 +40,7 @@ class LoginViewBody extends StatelessWidget {
           ),
           //TODO isloading instaed of text
           Gap(33),
-          CreateAccountRow(),
+          CreateAccountNow(),
           Gap(33),
           OrDividerWidget(),
           Gap(16),
