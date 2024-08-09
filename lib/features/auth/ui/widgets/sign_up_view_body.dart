@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/constants/constant.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/accept_rules_widget.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/name_field.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/sign_up_email_field.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/sign_up_password_field.dart';
 import 'package:gap/gap.dart';
 
 import 'login_now.dart';
+import 'terms_and_conditions_widget.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({
@@ -16,8 +17,8 @@ class SignUpViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
+      padding: EdgeInsets.symmetric(
+        horizontal: KHorzintalPadding,
       ),
       child: Column(
         children: [
@@ -28,7 +29,7 @@ class SignUpViewBody extends StatelessWidget {
           Gap(16),
           SignUpPasswordField(),
           Gap(16),
-          AcceptRulesWidget(),
+          TermsAndConditionsWidget(),
           Gap(30),
           CustomButton(
             text: 'إنشاء حساب جديد',
