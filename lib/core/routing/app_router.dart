@@ -1,3 +1,4 @@
+import 'package:fruit_hub/features/auth/ui/view/forget_password_view.dart';
 import 'package:fruit_hub/features/auth/ui/view/login_view.dart';
 import 'package:fruit_hub/features/auth/ui/view/sign_up_view.dart';
 import 'package:fruit_hub/features/splash/ui/view/spalsh_view.dart';
@@ -10,6 +11,7 @@ class AppRouter {
   static const String onBoarding = '/onBoarding';
   static const login = '/login';
   static const signUp = '/signUp';
+  static const forgetPasword = '/forgetPasword';
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -27,7 +29,11 @@ class AppRouter {
       GoRoute(
         path: signUp,
         builder: (context, state) => SignUpView(),
-      )
+      ),
+      GoRoute(
+        path: forgetPasword,
+        builder: (context, state) => ForgetPasswordView(),
+      ),
     ],
   );
 }

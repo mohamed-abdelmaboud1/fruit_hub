@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/widgets/cusotm_text_button.dart';
+import 'package:go_router/go_router.dart';
 
 class ForgotPasswordTextButton extends StatelessWidget {
   const ForgotPasswordTextButton({
@@ -12,7 +14,9 @@ class ForgotPasswordTextButton extends StatelessWidget {
       alignment: Alignment.centerRight,
       child: CusotmTextButton(
         text: 'نسيت كلمة المرور؟',
-        onTap: () {},
+        onTap: () {
+          context.push(AppRouter.forgetPasword);
+        },
       ),
     );
   }
