@@ -9,7 +9,8 @@ class SignUpPasswordField extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isVisible = useState<bool>(false);
+    final isVisible = useState<bool>(true);
+
     return CustomTextFormField(
       labeltext: 'كلمة المرور',
       obscureText: isVisible.value,

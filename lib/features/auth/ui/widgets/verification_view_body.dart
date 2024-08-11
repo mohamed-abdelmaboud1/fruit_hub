@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/constants/constant.dart';
+import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/utils/app_styles.dart';
 import 'package:fruit_hub/core/widgets/cusotm_text_button.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/verification_pin_fields.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class VerificationViewBody extends StatelessWidget {
   const VerificationViewBody({
@@ -28,7 +30,9 @@ class VerificationViewBody extends StatelessWidget {
           VerificationPinFields(),
           Gap(30),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push(AppRouter.newPassword);
+            },
             text: 'تحقق من الرمز',
           ),
           Gap(24),

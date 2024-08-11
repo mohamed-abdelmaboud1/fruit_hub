@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/custom_text_form_field.dart';
 
-class LoginPasswordField extends HookWidget {
-  const LoginPasswordField({
+class ConfirmPasswordField extends HookWidget {
+  const ConfirmPasswordField({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     final isVisible = useState<bool>(true);
-   
     return CustomTextFormField(
-      labeltext: 'كلمة المرور',
+      labeltext: 'تأكيد كلمة المرور',
       obscureText: isVisible.value,
       keyboardType: TextInputType.visiblePassword,
       suffixIcon: GestureDetector(
