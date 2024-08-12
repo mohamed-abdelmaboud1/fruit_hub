@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -6,17 +7,21 @@ import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/utils/custom_scroll_behavior.dart';
 
 import 'core/services/cache_helper.dart';
+import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
 void main() async {
-  await CacheHelper.init();
-
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
       builder: (context) => MyApp(),
     ),
   );
+  await CacheHelper.init();
 }
 
 class MyApp extends StatelessWidget {
