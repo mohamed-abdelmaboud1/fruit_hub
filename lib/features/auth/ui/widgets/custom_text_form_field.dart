@@ -11,12 +11,16 @@ class CustomTextFormField extends StatelessWidget {
     this.keyboardType,
     this.obscureText = false,
     this.onChanged,
+    this.onSaved,
+    this.validator,
   });
   final void Function(String value)? onChanged;
+  final void Function(String? value)? onSaved;
   final String? labeltext;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final String? Function(String? value)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +29,8 @@ class CustomTextFormField extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: keyboardType,
       onChanged: onChanged,
-      // onFieldSubmitted: ,
-      // onSaved: ,
+      onSaved: onSaved,
+      validator: validator,
       decoration: InputDecoration(
         filled: true,
         fillColor: const Color(0XFFF9FAFA),

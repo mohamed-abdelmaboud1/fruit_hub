@@ -19,6 +19,10 @@ class FirebaseAuthServices {
         throw CustomException(
           message: 'The account already exists for that email.',
         );
+      } else if (e.code == 'invalid-email') {
+        throw CustomException(
+          message: 'The email address is not valid.',
+        );
       } else
         throw CustomException(
           message: 'An error Occurred , please try later',

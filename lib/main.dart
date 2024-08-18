@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/routing/app_router.dart';
 import 'package:fruit_hub/core/utils/custom_scroll_behavior.dart';
 
 import 'core/services/cache_helper.dart';
+import 'core/services/service_locator.dart';
 import 'firebase_options.dart';
 import 'generated/l10n.dart';
 
@@ -15,6 +16,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setup();
+  
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
