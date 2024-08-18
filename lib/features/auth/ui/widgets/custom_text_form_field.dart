@@ -20,11 +20,13 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       cursorColor: AppColors.primaryColor,
       obscureText: obscureText,
       keyboardType: keyboardType,
       onChanged: onChanged,
+      // onFieldSubmitted: ,
+      // onSaved: ,
       decoration: InputDecoration(
         filled: true,
         fillColor: const Color(0XFFF9FAFA),
