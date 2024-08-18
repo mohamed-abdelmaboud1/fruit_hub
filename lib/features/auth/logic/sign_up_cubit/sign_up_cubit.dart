@@ -7,7 +7,7 @@ part 'sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
   SignUpCubit(this.authRepo) : super(SignUpInitial());
-  final AuthRepo authRepo;
+  final AuthRepo authRepo ;
   signUPWithEmailAndPassword(
       {required String email, required String password}) async {
     emit(SignUpLoading());
