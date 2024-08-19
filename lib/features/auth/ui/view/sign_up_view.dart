@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/helper/show_snack_bar.dart';
@@ -22,7 +24,9 @@ class SignUpView extends StatelessWidget {
             context.pop();
           }
           if (state is SignUpFailure) {
-            showCustomSnackBar(context, state.message);
+            log(state.message);
+            
+            showCustomSnackBar(context, state.message, isError: true);
           }
         },
         builder: (context, state) {

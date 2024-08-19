@@ -3,7 +3,5 @@ class CustomException implements Exception {
 
   CustomException({required this.message});
   @override
-  String toString() {
-    return super.toString();
-  }
+  String toString() => message;
 }

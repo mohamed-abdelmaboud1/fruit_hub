@@ -22,6 +22,7 @@ class SignUpViewBody extends StatelessWidget {
       ),
       child: Form(
         key: SignUpCubit.get(context).formKey,
+        autovalidateMode: SignUpCubit.get(context).autovalidateMode,
         child: Column(
           children: [
             Gap(24),

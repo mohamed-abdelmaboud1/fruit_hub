@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/features/auth/domain/entites/user_entity.dart';
@@ -14,11 +16,14 @@ class SignUpCubit extends Cubit<SignUpState> {
   String email = '';
   String password = '';
   final formKey = GlobalKey<FormState>();
-  AutovalidateMode autovalidateMode = AutovalidateMode.always;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
   signUpWithEmailAndPassword() async {
     if (_formNotValid()) return;
+
     emit(SignUpLoading());
     var result = await authRepo.createUserWithEmailAndPassword(email, password);
+    log('result: $result');
     result.fold(
       (failure) => emit(SignUpFailure(message: failure.message)),
       (user) {
@@ -29,8 +34,9 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   bool _formNotValid() {
     if (!formKey.currentState!.validate()) {
-      autovalidateMode = AutovalidateMode.onUserInteraction;
+      autovalidateMode = AutovalidateMode.always;
     }
+    formKey.currentState!.save();
     return !formKey.currentState!.validate();
   }
 }
