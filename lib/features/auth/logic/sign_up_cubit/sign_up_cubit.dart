@@ -35,8 +35,10 @@ class SignUpCubit extends Cubit<SignUpState> {
   bool _formNotValid() {
     if (!formKey.currentState!.validate()) {
       autovalidateMode = AutovalidateMode.always;
+      return true;
     }
     formKey.currentState!.save();
-    return !formKey.currentState!.validate();
+    return false;
   }
+
 }

@@ -7,13 +7,17 @@ import 'terms_and_conditions_text.dart';
 class TermsAndConditionsWidget extends StatelessWidget {
   const TermsAndConditionsWidget({
     super.key,
+    required this.onChanged,
   });
+  final ValueChanged<bool> onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomCheckBox(),
+        CustomCheckBox(
+          onChanged: onChanged,
+        ),
         Gap(8),
         TermsAndConditionsText(),
       ],

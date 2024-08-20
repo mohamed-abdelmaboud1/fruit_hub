@@ -9,10 +9,12 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     required this.text,
     this.isLoading = false,
+    this.isButtonEnabled = true,
   });
   final VoidCallback onPressed;
   final String text;
   final bool isLoading;
+  final bool isButtonEnabled;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class CustomButton extends StatelessWidget {
           50,
         ),
       ),
-      onPressed: onPressed,
+      onPressed: isButtonEnabled ? onPressed : null,
       child: isLoading
           ? LoadingAnimationWidget.threeArchedCircle(
               color: Colors.white,

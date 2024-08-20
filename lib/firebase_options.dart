@@ -44,40 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA9zlUFepu1gDzWhbYApOFDhVH5RGhP5r0',
-    appId: '1:601986191194:web:e5bb3d29b6dbc7736b6d63',
-    messagingSenderId: '601986191194',
-    projectId: 'auth-c59e4',
-    authDomain: 'auth-c59e4.firebaseapp.com',
-    storageBucket: 'auth-c59e4.appspot.com',
-    measurementId: 'G-82M7C9L2SJ',
+    apiKey: 'AIzaSyAYaF5WiNz9MoG8MjlYXYX_-Xi7JWBl-VU',
+    appId: '1:529415271397:web:7b2699d4cd81ddb5fc750c',
+    messagingSenderId: '529415271397',
+    projectId: 'fruit-hub-51083',
+    authDomain: 'fruit-hub-51083.firebaseapp.com',
+    storageBucket: 'fruit-hub-51083.appspot.com',
+    measurementId: 'G-E2HME4KPGH',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDi_CZ4qK9JLkAMzUDmQ4QejSuPx4OtJ2c',
-    appId: '1:601986191194:android:83c65dce9145116b6b6d63',
-    messagingSenderId: '601986191194',
-    projectId: 'auth-c59e4',
-    storageBucket: 'auth-c59e4.appspot.com',
+    apiKey: 'AIzaSyCr4XaNVHoK5rmUZ3qxXDLEWytSShULuJU',
+    appId: '1:529415271397:android:5064bbf4b79e8de2fc750c',
+    messagingSenderId: '529415271397',
+    projectId: 'fruit-hub-51083',
+    storageBucket: 'fruit-hub-51083.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCCqgrV-jTSf_XVcz3Fvz-KV6blJ7PuS-c',
-    appId: '1:601986191194:ios:54a9674a31702b916b6d63',
-    messagingSenderId: '601986191194',
-    projectId: 'auth-c59e4',
-    storageBucket: 'auth-c59e4.appspot.com',
-    iosClientId: '601986191194-kteckeh4nv78sumpsg9k4gkm55u2fvno.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCXOSGx7EDgjspQW2PWinHwpOr6_S9hMkE',
+    appId: '1:529415271397:ios:951a85d83ac5b035fc750c',
+    messagingSenderId: '529415271397',
+    projectId: 'fruit-hub-51083',
+    storageBucket: 'fruit-hub-51083.appspot.com',
     iosBundleId: 'com.example.fruitHub',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCCqgrV-jTSf_XVcz3Fvz-KV6blJ7PuS-c',
-    appId: '1:601986191194:ios:1995813d256eff326b6d63',
-    messagingSenderId: '601986191194',
-    projectId: 'auth-c59e4',
-    storageBucket: 'auth-c59e4.appspot.com',
-    iosClientId: '601986191194-27dkeg555f1gtdeepe3ijfa6a036ej8k.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCXOSGx7EDgjspQW2PWinHwpOr6_S9hMkE',
+    appId: '1:529415271397:ios:25293e4aa355d7b0fc750c',
+    messagingSenderId: '529415271397',
+    projectId: 'fruit-hub-51083',
+    storageBucket: 'fruit-hub-51083.appspot.com',
     iosBundleId: 'com.example.fruitHub.RunnerTests',
   );
 }

@@ -5,7 +5,10 @@ import 'package:fruit_hub/core/utils/app_colors.dart';
 class CustomCheckBox extends HookWidget {
   const CustomCheckBox({
     super.key,
+    required this.onChanged,
   });
+  // final VoidCallback onTap;
+  final ValueChanged<bool> onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +16,7 @@ class CustomCheckBox extends HookWidget {
     return GestureDetector(
       onTap: () {
         isChecked.value = !isChecked.value;
+        onChanged(isChecked.value);
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 100),
