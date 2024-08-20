@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../utils/app_colors.dart';
-import '../utils/app_styles.dart';
+import 'package:fruit_hub/core/utils/app_colors.dart';
+import 'package:fruit_hub/core/utils/app_styles.dart';
 
 void showCustomSnackBar(
   BuildContext context,
@@ -10,6 +9,8 @@ void showCustomSnackBar(
 }) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
+      margin: const EdgeInsets.symmetric(horizontal: 50),
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
       dismissDirection: DismissDirection.horizontal,
       duration: const Duration(milliseconds: 1000),
       shape: RoundedRectangleBorder(
@@ -25,8 +26,8 @@ void showCustomSnackBar(
           text,
           style: AppStyles.regular16.copyWith(
             color: Colors.white,
-            fontSize: 16,
-            fontFamily: 'Mizra',
+            fontSize: 20,
+            fontFamily: 'Mirza',
           ),
         ),
       ),
