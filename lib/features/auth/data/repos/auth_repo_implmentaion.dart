@@ -27,7 +27,7 @@ class AuthRepoimplmentaion extends AuthRepo {
     } catch (e) {
       log(
         'Exception in AuthRepoImpl.createUserWithEmailAndPassword: ${e.toString()}',
-      );
+      ); 
       return left(
         ServerFailure(
           message: 'An error Occurred , please try later',

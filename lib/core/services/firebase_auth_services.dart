@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../error/exceptions.dart';
@@ -13,6 +15,8 @@ class FirebaseAuthServices {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+      log("Exception in FirebaseAuth.createUserWithEmailAndPassword: ${e.message}");
+
       if (e.code == 'weak-password') {
         throw CustomException(message: 'كلمة المرور المقدمة ضعيفة جداً.');
       } else if (e.code == 'email-already-in-use') {
@@ -23,9 +27,14 @@ class FirebaseAuthServices {
         throw CustomException(
           message: 'عنوان البريد الإلكتروني غير صالح.',
         );
+      } else if (e.code == 'network-request-failed') {
+        throw CustomException(
+          message: 'لا يوجد اتصال بالانترنت.',
+        );
       } else {
         throw CustomException(
           message: 'حدث خطأ، يرجى المحاولة لاحقاً.',
+          errorCode: e.code,
         );
       }
     } catch (e) {
