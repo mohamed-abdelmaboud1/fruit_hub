@@ -15,8 +15,7 @@ class FirebaseAuthServices {
       );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      log("Exception in FirebaseAuth.createUserWithEmailAndPassword: ${e.message}");
-
+      log("Exception in FirebaseAuth.createUserWithEmailAndPassword: ${e.code} with message: ${e.message}");
       if (e.code == 'weak-password') {
         throw CustomException(message: 'كلمة المرور المقدمة ضعيفة جداً.');
       } else if (e.code == 'email-already-in-use') {
