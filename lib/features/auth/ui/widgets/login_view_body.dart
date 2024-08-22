@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/constants/constant.dart';
 import 'package:fruit_hub/core/widgets/custom_button.dart';
+import 'package:fruit_hub/features/auth/logic/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/or_divider_widget.dart';
 import 'package:gap/gap.dart';
 
@@ -35,11 +36,12 @@ class LoginViewBody extends StatelessWidget {
           ForgotPasswordTextButton(),
           Gap(33),
           CustomButton(
-            
-            onPressed: () {},
+            isLoading: SignInCubit.get(context).state is SignInLoading,
+            onPressed: () {
+              SignInCubit.get(context).signInWithEmailAndPassword();
+            },
             text: 'تسجيل الدخول',
           ),
-          //TODO isloading instaed of text
           Gap(33),
           CreateAccountNow(),
           Gap(33),
