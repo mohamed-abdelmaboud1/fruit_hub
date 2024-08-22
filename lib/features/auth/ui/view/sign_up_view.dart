@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-fiximport '../../../../core/widgets/custom_app_bar.dart';
-import 'package:fruit_hub/features/auth/logic/sign_up_cubit/sign_up_cubit.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
+import '../../logic/sign_up_cubit/sign_up_cubit.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/helper/show_custom_snack_bar.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:fruit_hub/core/utils/validator_helper.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/custom_text_form_field.dart';
 
 import '../../logic/sign_in_cubit/sign_in_cubit.dart';
@@ -14,6 +15,7 @@ class LoginPasswordField extends HookWidget {
     final isVisible = useState<bool>(true);
 
     return CustomTextFormField(
+      validator: ValidatorHelper.validatePassword,
       labeltext: 'كلمة المرور',
       obscureText: isVisible.value,
       keyboardType: TextInputType.visiblePassword,

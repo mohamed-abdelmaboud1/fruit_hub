@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/constants/constant.dart';
-import 'package:fruit_hub/core/routing/app_router.dart';
-import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/reset_password_text_field.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/verification_text.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/constants/constant.dart';
+import '../../../../core/routing/app_router.dart';
+import '../../../../core/widgets/custom_button.dart';
+import 'reset_password_text_field.dart';
+import 'verification_text.dart';
 
 class PasswordViewBody extends StatelessWidget {
   const PasswordViewBody({
@@ -27,7 +28,7 @@ class PasswordViewBody extends StatelessWidget {
             onPressed: () {
               context.push(AppRouter.verification);
             },
-            text: 'نسيت كلمة المرور',
+            text: 'نسيتd كلمة المرور',
           ),
         ],
       ),
