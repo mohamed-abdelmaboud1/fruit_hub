@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_styles.dart';
-import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../../data/models/page_view_item_model.dart';
 
 import '../../../../core/helper/navigate_to_login_view.dart';
 

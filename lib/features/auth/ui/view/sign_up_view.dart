@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/core/widgets/custom_app_bar.dart';
+fiximport '../../../../core/widgets/custom_app_bar.dart';
 import 'package:fruit_hub/features/auth/logic/sign_up_cubit/sign_up_cubit.dart';
 import 'package:go_router/go_router.dart';
 

@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruit_hub/core/routing/app_router.dart';
-import 'package:fruit_hub/core/utils/custom_scroll_behavior.dart';
+import 'core/routing/app_router.dart';
+import 'core/utils/custom_scroll_behavior.dart';
 
 import 'core/services/bloc_oberver.dart';
 import 'core/services/cache_helper.dart';

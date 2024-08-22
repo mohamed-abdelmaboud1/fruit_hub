@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/constants/constant.dart';
-import 'package:fruit_hub/core/widgets/custom_button.dart';
+import '../../../../core/constants/constant.dart';
+import '../../../../core/widgets/custom_button.dart';
 
 import '../../../../core/helper/navigate_to_login_view.dart';
 

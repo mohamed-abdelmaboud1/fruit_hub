@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.dart';
+import '../../data/models/page_view_item_model.dart';
 
 import 'page_view_item_text_body.dart';
 import 'skip_button.dart';

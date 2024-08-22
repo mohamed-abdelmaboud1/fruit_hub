@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_images.dart';
-import 'package:fruit_hub/features/onboarding/data/models/page_view_item_model.dart';
-import 'package:fruit_hub/features/onboarding/ui/widgets/page_view_item.dart';
+import '../../../../core/utils/app_images.dart';
+import '../../data/models/page_view_item_model.dart';
+import 'page_view_item.dart';
 
 import 'page_view_item_title.dart';
 import 'page_view_item_title2.dart';
