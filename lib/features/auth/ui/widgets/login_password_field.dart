@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fruit_hub/features/auth/ui/widgets/custom_text_form_field.dart';
 
+import '../../logic/sign_in_cubit/sign_in_cubit.dart';
+
 class LoginPasswordField extends HookWidget {
   const LoginPasswordField({
     super.key,
@@ -10,7 +12,7 @@ class LoginPasswordField extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isVisible = useState<bool>(true);
-   
+
     return CustomTextFormField(
       labeltext: 'كلمة المرور',
       obscureText: isVisible.value,
@@ -24,7 +26,9 @@ class LoginPasswordField extends HookWidget {
           color: Color(0xffC9CECF),
         ),
       ),
-      onChanged: (value) {},
+      onSaved: (value) {
+        SignInCubit.get(context).password = value!;
+      },
     );
   }
 }

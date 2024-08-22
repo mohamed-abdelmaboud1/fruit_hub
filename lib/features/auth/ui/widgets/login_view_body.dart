@@ -35,6 +35,7 @@ class LoginViewBody extends StatelessWidget {
           ForgotPasswordTextButton(),
           Gap(33),
           CustomButton(
+            
             onPressed: () {},
             text: 'تسجيل الدخول',
           ),

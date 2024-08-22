@@ -14,6 +14,8 @@ class FirebaseAuthServices {
         email: email,
         password: password,
       );
+      print(credential.user!.uid); // print id of user
+
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       log("Exception in FirebaseAuth.createUserWithEmailAndPassword: ${e.code} with message: ${e.message}");
