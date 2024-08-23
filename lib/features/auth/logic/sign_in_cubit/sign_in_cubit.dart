@@ -34,6 +34,23 @@ class SignInCubit extends Cubit<SignInState> {
     );
   }
 
+  signInWithGoogle() async {
+    emit(SignInGoogleLoading());
+    var result = await authRepo.signInWithGoogle();
+    result.fold(
+      (failure) => emit(
+        SignUpFailure(
+          message: failure.message,
+        ),
+      ),
+      (userEntity) => emit(
+        SignInSuccess(
+          userEntity: userEntity,
+        ),
+      ),
+    );
+  }
+
   bool _formNotValid() {
     if (!formKey.currentState!.validate()) {
       autovalidateMode = AutovalidateMode.always;
