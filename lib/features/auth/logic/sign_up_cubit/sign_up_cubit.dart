@@ -2,8 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/features/auth/domain/entites/user_entity.dart';
-import 'package:fruit_hub/features/auth/domain/reops/auth_repo.dart';
+
+import '../../domain/entites/user_entity.dart';
+import '../../domain/reops/auth_repo.dart';
 
 part 'sign_up_state.dart';
 
@@ -41,5 +42,4 @@ class SignUpCubit extends Cubit<SignUpState> {
     formKey.currentState!.save();
     return false;
   }
-
 }

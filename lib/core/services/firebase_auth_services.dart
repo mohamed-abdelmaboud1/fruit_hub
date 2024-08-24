@@ -110,4 +110,19 @@ class FirebaseAuthServices {
     // Once signed in, return the User
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
+
+  /// sign with facebook account
+  Future<User> signInWithFacebook() async {
+    // Create a new provider
+    final FacebookAuthProvider facebookProvider = FacebookAuthProvider();
+
+    // Once signed in, return the User
+    return (await FirebaseAuth.instance.signInWithPopup(facebookProvider))
+        .user!;
+  }
+
+  // sign out
+  Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruit_hub/core/utils/app_styles.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_styles.dart';
 
 class AuthButton extends StatelessWidget {
   const AuthButton({
@@ -36,7 +38,7 @@ class AuthButton extends StatelessWidget {
             Spacer(),
             isLoading
                 ? LoadingAnimationWidget.stretchedDots(
-                    color: Colors.white,
+                    color: AppColors.primaryColor,
                     size: 25,
                   )
                 : Text(

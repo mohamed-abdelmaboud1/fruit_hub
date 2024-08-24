@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_images.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/auth_button.dart';
 
+import '../../../../core/utils/app_images.dart';
 import '../../logic/sign_in_cubit/sign_in_cubit.dart';
+import 'auth_button.dart';
 
 class LoginWithGoogle extends StatelessWidget {
   const LoginWithGoogle({

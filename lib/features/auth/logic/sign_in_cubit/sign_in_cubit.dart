@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_hub/features/auth/domain/reops/auth_repo.dart';
 
 import '../../domain/entites/user_entity.dart';
+import '../../domain/reops/auth_repo.dart';
 
 part 'sign_in_state.dart';
 
@@ -37,6 +37,23 @@ class SignInCubit extends Cubit<SignInState> {
   signInWithGoogle() async {
     emit(SignInGoogleLoading());
     var result = await authRepo.signInWithGoogle();
+    result.fold(
+      (failure) => emit(
+        SignUpFailure(
+          message: failure.message,
+        ),
+      ),
+      (userEntity) => emit(
+        SignInSuccess(
+          userEntity: userEntity,
+        ),
+      ),
+    );
+  }
+
+  signWithFacebook() async {
+    emit(SignInFacebookLoading());
+    var result = await authRepo.signInWithFacebook();
     result.fold(
       (failure) => emit(
         SignUpFailure(

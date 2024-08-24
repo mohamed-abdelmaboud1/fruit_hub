@@ -70,4 +70,10 @@ class AuthRepoimplmentaion extends AuthRepo {
     final user = await firebaseAuthServices.signInWithGoogle();
     return right(UserModel.fromFirebaseUser(user));
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    final user = await firebaseAuthServices.signInWithFacebook();
+    return right(UserModel.fromFirebaseUser(user));
+  }
 }
