@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_images.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/auth_button.dart';
+
+import '../../../../core/utils/app_images.dart';
+import '../../logic/sign_in_cubit/sign_in_cubit.dart';
+import 'auth_button.dart';
 
 class LoginWithFacebook extends StatelessWidget {
   const LoginWithFacebook({
@@ -10,8 +12,12 @@ class LoginWithFacebook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthButton(
+      onTap: () {
+        SignInCubit.get(context).signWithFacebook();
+      },
       text: 'فيسبوك',
       iconPath: Assets.assetsImagesFacebookIcon,
+      isLoading: SignInCubit.get(context).state is SignInFacebookLoading,
     );
   }
 }
