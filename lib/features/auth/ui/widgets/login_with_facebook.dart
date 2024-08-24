@@ -17,7 +17,9 @@ class LoginWithFacebook extends StatelessWidget {
       },
       text: 'فيسبوك',
       iconPath: Assets.assetsImagesFacebookIcon,
-      isLoading: SignInCubit.get(context).state is SignInFacebookLoading,
+      isLoading: SignInCubit.get(context).state is SignInFacebookLoading
+          ? true
+          : false,
     );
   }
 }

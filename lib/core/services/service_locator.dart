@@ -1,7 +1,8 @@
-import 'package:fruit_hub/core/services/firebase_auth_services.dart';
-import 'package:fruit_hub/features/auth/data/repos/auth_repo_implmentaion.dart';
-import 'package:fruit_hub/features/auth/domain/reops/auth_repo.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../features/auth/data/repos/auth_repo_implmentaion.dart';
+import '../../features/auth/domain/reops/auth_repo.dart';
+import 'firebase_auth_services.dart';
 
 final getIt = GetIt.instance;
 

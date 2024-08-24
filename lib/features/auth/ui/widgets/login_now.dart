@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/text_with_button_row.dart';
 import 'package:go_router/go_router.dart';
+
+import 'text_with_button_row.dart';
 
 class LoginNow extends StatelessWidget {
   const LoginNow({

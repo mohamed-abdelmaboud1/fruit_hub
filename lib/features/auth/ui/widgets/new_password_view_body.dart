@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/constants/constant.dart';
-import 'package:fruit_hub/core/utils/app_styles.dart';
-import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/confirm_password_field.dart';
 import 'package:gap/gap.dart';
 
+import '../../../../core/constants/constant.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../../../../core/widgets/custom_button.dart';
+import 'confirm_password_field.dart';
 import 'dialog_body.dart';
 import 'new_password_field.dart';
 

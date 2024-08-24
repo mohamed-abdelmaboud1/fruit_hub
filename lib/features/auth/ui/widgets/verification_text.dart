@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_styles.dart';
+
+import '../../../../core/utils/app_styles.dart';
 
 class VerificationText extends StatelessWidget {
   const VerificationText({

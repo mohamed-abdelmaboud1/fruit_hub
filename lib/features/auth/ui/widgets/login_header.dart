@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruit_hub/core/utils/app_images.dart';
-import 'package:fruit_hub/features/onboarding/ui/widgets/page_view_item_title.dart';
 import 'package:gap/gap.dart';
+
+import '../../../../core/utils/app_images.dart';
+import '../../../onboarding/ui/widgets/page_view_item_title.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({

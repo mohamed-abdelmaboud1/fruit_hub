@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/utils/app_colors.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
+import '../../../../core/utils/app_colors.dart';
 
 class VerificationPinFields extends StatelessWidget {
   const VerificationPinFields({

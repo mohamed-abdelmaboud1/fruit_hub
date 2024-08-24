@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/core/widgets/custom_button.dart';
-import 'package:fruit_hub/features/auth/logic/sign_up_cubit/sign_up_cubit.dart';
+
+import '../../../../core/widgets/custom_button.dart';
+import '../../logic/sign_up_cubit/sign_up_cubit.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/auth/ui/widgets/custom_text_form_field.dart';
 
 import '../../../../core/utils/validator_helper.dart';
 import '../../logic/sign_up_cubit/sign_up_cubit.dart';
+import 'custom_text_form_field.dart';
 
 class SignUpEmailField extends StatelessWidget {
   const SignUpEmailField({
