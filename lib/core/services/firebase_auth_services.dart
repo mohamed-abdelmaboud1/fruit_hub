@@ -18,11 +18,13 @@ class FirebaseAuthServices {
         email: email,
         password: password,
       );
-      log(credential.user!.uid); // print id of user
+
       User user = credential.user!;
       await user.updateDisplayName(name);
-      
-      log(credential.user!.displayName.toString());
+      await user.reload(); // Reload the user to get the updated data
+      user = FirebaseAuth.instance.currentUser!; // Fetch the updated user
+      log(user.uid); // Print ID of the user
+      log(user.displayName.toString()); // Print updated display name
 
       return user;
     } on FirebaseAuthException catch (e) {
