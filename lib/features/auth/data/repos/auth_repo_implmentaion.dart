@@ -20,12 +20,14 @@ class AuthRepoimplmentaion extends AuthRepo {
   });
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
-      String email, String password) async {
+      String email, String password, String name) async {
     try {
       final user = await firebaseAuthServices.createUserWithEmailAndPassword(
         email: email,
         password: password,
+        name: name,
       );
+
       UserEntity userEntity = UserModel.fromFirebaseUser(user);
       await addData(userEntity: userEntity);
 

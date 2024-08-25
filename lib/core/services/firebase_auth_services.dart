@@ -9,16 +9,22 @@ import '../error/exceptions.dart';
 class FirebaseAuthServices {
   // create user with email and password
   Future<User> createUserWithEmailAndPassword(
-      {required String email, required String password}) async {
+      {required String email,
+      required String password,
+      required String name}) async {
     try {
       final credential =
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      print(credential.user!.uid); // print id of user
+      log(credential.user!.uid); // print id of user
+      User user = credential.user!;
+      await user.updateDisplayName(name);
+      
+      log(credential.user!.displayName.toString());
 
-      return credential.user!;
+      return user;
     } on FirebaseAuthException catch (e) {
       log("Exception in FirebaseAuth.createUserWithEmailAndPassword: ${e.code} with message: ${e.message}");
       if (e.code == 'weak-password') {

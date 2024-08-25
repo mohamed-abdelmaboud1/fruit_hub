@@ -23,8 +23,9 @@ class SignUpCubit extends Cubit<SignUpState> {
     if (_formNotValid()) return;
 
     emit(SignUpLoading());
-    var result = await authRepo.createUserWithEmailAndPassword(email, password);
-    log('result: $result');
+    var result =
+        await authRepo.createUserWithEmailAndPassword(email, password, name);
+    log(name);
     result.fold(
       (failure) => emit(SignUpFailure(message: failure.message)),
       (user) {
