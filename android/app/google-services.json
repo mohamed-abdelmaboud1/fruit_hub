@@ -48,6 +48,42 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529415271397:android:99fa0d94ffd0312cfc750c",
+        "android_client_info": {
+          "package_name": "com.example.fruit_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529415271397-u9fn3n7dmqfqhvo1vrbeg9b38vge2j39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr4XaNVHoK5rmUZ3qxXDLEWytSShULuJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529415271397-u9fn3n7dmqfqhvo1vrbeg9b38vge2j39.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "529415271397-jfdcq3n9jie3t19862ibfohmio939cei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fruitHub.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCr4XaNVHoK5rmUZ3qxXDLEWytSShULuJU',
-    appId: '1:529415271397:android:5064bbf4b79e8de2fc750c',
+    appId: '1:529415271397:android:99fa0d94ffd0312cfc750c',
     messagingSenderId: '529415271397',
     projectId: 'fruit-hub-51083',
     storageBucket: 'fruit-hub-51083.appspot.com',
@@ -67,6 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '529415271397',
     projectId: 'fruit-hub-51083',
     storageBucket: 'fruit-hub-51083.appspot.com',
+    androidClientId: '529415271397-s3kttr2ac6lr16rhruds7b2t2tof1l0s.apps.googleusercontent.com',
+    iosClientId: '529415271397-mht3bvrjjg2ogfj063uv70kml6oif01j.apps.googleusercontent.com',
     iosBundleId: 'com.example.fruitHub',
   );
 
@@ -76,6 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '529415271397',
     projectId: 'fruit-hub-51083',
     storageBucket: 'fruit-hub-51083.appspot.com',
+    androidClientId: '529415271397-s3kttr2ac6lr16rhruds7b2t2tof1l0s.apps.googleusercontent.com',
+    iosClientId: '529415271397-jfdcq3n9jie3t19862ibfohmio939cei.apps.googleusercontent.com',
     iosBundleId: 'com.example.fruitHub.RunnerTests',
   );
 }
